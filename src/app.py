@@ -1,6 +1,7 @@
 
 from flask import Flask
 from controller.subscription import subscriptions
+
 class App:
   def __init__(self):
     self.app = Flask(__name__)
