@@ -1,4 +1,4 @@
-from service.resseler import Reseller
+from service.reseller import Reseller
 
 class CustomerService(Reseller):
   def __init__(self):
