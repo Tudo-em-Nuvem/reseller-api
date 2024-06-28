@@ -7,9 +7,10 @@ sheetService = SheetService()
 async def sheetRoutes(app:FastipyInstance, options:dict):
 
   @app.get("/concluded")
-  def get_tables(_, reply: Reply):
+  async def get_tables(_, reply: Reply):
     try:
-      return sheetService.get_tables(), 200
+      print(sheetService.get_tables())
+      await reply.send_code(200)
     except Exception as e:
       return str(e), 500
 
